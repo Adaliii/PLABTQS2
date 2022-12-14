@@ -1,22 +1,36 @@
+
+    
 @Register
 Feature: Register user
 
   @RegistreNormal
   Scenario: Registrar Usuari 
-    Given the user is in the home page
-    When the user clicks the signup or login button
-    And the user puts his name
+    Given the user is in the login or signup page
+    When the user puts his name
     And the user puts his email address
     And the user clicks the signup button
-    And the user enters personal data
+    And the user selects male gender
+    And the user enters data by id "password" "contrasenya"
+    And the user selects some value by id "days" "17"
+    And the user selects some value by id "months" "January"
+    And the user selects some value by id "years" "2003" 
+    And the user enters data by id "first_name" "Juan"
+    And the user enters data by id "last_name" "Garcia"
+    And the user enters data by id "address1" "Carrer Tus Muertos A Caballo numero 13"
+    And the user enters data by id "address2" "Carrer Tus Vivos A Caballo numero 31"
+    And the user selects some value by id "country" "Israel" 
+    And the user enters data by id "state" "nose"
+    And the user enters data by id "city" "Haifa"
+    And the user enters data by id "zipcode" "12345"
+    And the user enters data by id "mobile_number" "123456789"
     And the user clicks button account
     Then I validate account is created
     
    @RegistreAmbCorreuUsat
    Scenario: Registrar incorrectament
-    Given the user is in the home page
-    When the user clicks the signup or login button
-    And the user puts his name
+    Given the user is in the login or signup page
+    When the user puts his name
     And the user puts his email address
     And the user clicks the signup button
     Then the website shows mail is used
+    
