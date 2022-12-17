@@ -47,6 +47,11 @@ public class GlobalSteps {
     	driver.findElement(By.xpath(xpath)).sendKeys(value);
     }
 	
+	@When("the user clicks the login button")
+	public void theUserClicksTheLoginButton() {
+		driver.findElement(By.tagName("button")).click();
+	}
+	
 	@When("the user enters data by id {string} {string}")
     public void theUserEntersDataById(String id, String value) {
     	driver.findElement(By.id(id)).sendKeys(value);

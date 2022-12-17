@@ -10,10 +10,7 @@ import io.cucumber.java.en.When;
 public class LoginSteps {
 	static WebDriver driver = Global.getDriver();
 	
-	@When("the user clicks the login button")
-	public void theUserClicksTheLoginButton() {
-		driver.findElement(By.tagName("button")).click();
-	}
+	
 	
 	@Then("I validate the login was correct")
 	public void iValidateTheLoginWasCorrect() {
