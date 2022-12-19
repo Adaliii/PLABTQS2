@@ -21,7 +21,7 @@ Feature: Login
     
 Examples:
 		| mail                | pswd         |
-		| "asdf@a.a"          | "asdfg"      |
+		| "asdf@a.a"          | "123456789"  |
 		|"NoSoyUnBot@Bot.Cat" | "1234567890" |
 		|"NoSoyUnBot@Bot.Cat" | "12345678"   |
 

@@ -27,7 +27,7 @@ Feature: Register user
     And the user clicks button account
     Then I validate account is created
    
-   @RegistreIBorrar
+   @BorrarUsuari
    Scenario: El usuari borra el compte que acabem de crear
    Given the user is in the index page
    When the user deletes account

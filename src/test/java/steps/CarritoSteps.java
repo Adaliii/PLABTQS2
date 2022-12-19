@@ -30,13 +30,12 @@ public class CarritoSteps {
 	public void theUserClicksTheHereButton() {
 		driver.findElement(By.xpath("//span//a")).click();
 	}
-	@When("the quantity of the product is {string}")
-	public void theQuantityOfTheProductIsNumber(String q) {
+	@Then("the quantity of the product is two")
+	public void theQuantityOfTheProductIsNumber() {
 		String quantity = driver.findElement(By.cssSelector(".disabled")).getText();
-		Assert.assertTrue(q.equals(quantity));
+		Assert.assertTrue(quantity.equals("2"));
 		driver.findElement(By.className("cart_quantity_delete")).click();
-		/*driver.navigate().to("https://automationexercise.com");
-		*/driver.findElement(By.linkText("Logout")).click();
+		driver.findElement(By.linkText("Logout")).click();
 	
 	}
 	@When("the user erases the product")

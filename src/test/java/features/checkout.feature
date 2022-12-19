@@ -2,7 +2,7 @@
 @Checkout
 Feature: Checkout
 
-  @DoCheckout
+  @FerCheckout
   Scenario: Fer el checkout
     Given the user is in the index page
   	And the user is logged in

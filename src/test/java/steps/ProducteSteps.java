@@ -8,7 +8,7 @@ import org.testng.Assert;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class ProductSteps {
+public class ProducteSteps {
 	public static WebDriver driver = Global.getDriver();
 	
 	@When("the user enters {string} in the search bar")
@@ -64,9 +64,6 @@ public class ProductSteps {
 	@Then("there is a blue top in the cart")
 	public void thereIsAProductInTheCart() {
 		String productName = driver.findElement(By.linkText("Blue Top")).getText();
-		for(int i = 0; i<20;i++) {
-			System.out.println(productName);
-		}
 		Assert.assertTrue(productName.equals("Blue Top"));
 		driver.findElement(By.className("cart_quantity_delete")).click();
 		driver.findElement(By.linkText("Logout")).click();

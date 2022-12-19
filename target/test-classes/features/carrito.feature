@@ -1,7 +1,7 @@
 @Cart
 Feature: Carrito
 
-  @ClickHere
+  @ClicarElHere
   Scenario: Clicar el here amb carrito buit
     Given the user is in the index page
     And the user enters the cart page
@@ -9,16 +9,16 @@ Feature: Carrito
     Then the user is redirected to the products page
 
 
-  @EraseCartItem
+  @BorrarItemCarrito
   Scenario: Borrar item del carrito
   	Given the user is in the index page
   	And the user is logged in
   	And the user has added an item to the cart
     And the user enters the cart page
-    And the user erases the product
+    When the user erases the product
     Then the cart is empty
     
-  @CheckQuantity
+  @QuantitatItem
   Scenario: Check quantity in cart
   	Given the user is in the index page
   	And the user is logged in
@@ -26,7 +26,7 @@ Feature: Carrito
   	And the user enters the cart page
   	And the user is in the index page
   	And the user has added an item to the cart
-  	And the user enters the cart page
-  	Then the quantity of the product is "2"
+  	When the user enters the cart page
+  	Then the quantity of the product is two
   	
   	

@@ -1,8 +1,8 @@
-@Products
+@Producte
 Feature: Products
 
-	@SearchProduct
-	Scenario: Busca productes 
+	@BuscarProducte
+	Scenario: Busca diferents productes 
 
 	Given the user is in the index page
 	And the user enters the products page
@@ -17,7 +17,7 @@ Feature: Products
       	| saree     |
       	| inshallah |  
      
-	@SearchCategory
+	@BuscarCategoria
 	Scenario: Buscar productes amb una opció de les categories
 	
 	Given the user is in the index page
@@ -34,8 +34,8 @@ Feature: Products
 				| //div[@id='accordian']//div[2]//div//h4//a//span//i | //div[@id = 'Men']//li[2]//a     | MEN - JEANS PRODUCTS            |
 				| //div[@id='accordian']//div[3]//div//h4//a//span//i | //div[@id = 'Kids']//li[1]//a    | KIDS - DRESS PRODUCTS           |
 				| //div[@id='accordian']//div[3]//div//h4//a//span//i | //div[@id = 'Kids']//li[2]//a    | KIDS - TOPS & SHIRTS PRODUCTS   |
-				
-	@SearchBrand
+				#div[1] = Women, div[2] = Men, div[3] = Kids            #el index del li[] fa referència a les categories que apareixen a la pagina al desplegar cada categoria en ordre
+	@BuscarMarca
 	Scenario: Buscar productes amb una opcio de les marques
 	Given the user is in the index page
 	And the user enters the products page
