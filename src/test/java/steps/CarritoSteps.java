@@ -25,7 +25,6 @@ public class CarritoSteps {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
     	js.executeScript("window.scrollBy(0,500)", "");
 		driver.findElement(By.className("add-to-cart")).click();
-		
 	}
 	@When("the user clicks the here button")
 	public void theUserClicksTheHereButton() {
