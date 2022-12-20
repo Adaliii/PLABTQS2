@@ -7,8 +7,8 @@ Feature: Gestio/Consulta producte
     When the user clicks ViewProduct of the first product
     Then the user is in the product information page
 
-	@AfegirProducteISeguirComprant
-	Scenario: Afegir un producte al carro i seguir comprant
+	@AfegirProducteIMirarCarrito
+	Scenario: Afegir un producte al carro i comprovar que esta al carrito
 		Given the user is in the index page
 		And the user is logged in
 		When the user clicks ViewProduct of the first product
